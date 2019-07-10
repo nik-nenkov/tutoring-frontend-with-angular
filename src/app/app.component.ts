@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {fromEvent} from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -8,3 +9,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'book-library-angular';
 }
+
+fromEvent(document, 'click').subscribe(() => console.log('Clicked!'));
