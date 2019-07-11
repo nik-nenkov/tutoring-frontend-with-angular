@@ -7,12 +7,16 @@ import {AppComponent} from './app.component';
 import {TopBarComponent} from './component/nav/top-bar/top-bar.component';
 import {BooksViewComponent} from './component/display/books/books-view.component';
 import {MatIconModule} from '@angular/material';
+import {BookComponent} from './component/instance/book/book.component';
+import {BookDetailsComponent} from './component/instance/book-details/book-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopBarComponent,
-    BooksViewComponent
+    BooksViewComponent,
+    BookComponent,
+    BookDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -20,6 +24,7 @@ import {MatIconModule} from '@angular/material';
     MatIconModule,
     RouterModule.forRoot([
       {path: 'books', component: BooksViewComponent},
+      {path: 'book/:bookId', component: BookDetailsComponent}
     ])
   ],
   providers: [],

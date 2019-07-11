@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {books} from '../../../books';
 
 @Component({
   selector: 'app-books-view',
@@ -7,6 +8,7 @@ import {Component, OnInit} from '@angular/core';
 })
 
 export class BooksViewComponent implements OnInit {
+  books = books;
   constructor() {
   }
 

@@ -1,0 +1,16 @@
+<div style="padding: 18px">
+
+  <div *ngIf="book">
+    <a [routerLink]="['/books']" style="
+ display: inline;">
+      <mat-icon style="
+      display: inline;">backspace
+      </mat-icon>
+    </a>
+    <h2 style="
+ display: inline;padding: 12px">Book Details</h2>
+    <h3>{{ book.title }}</h3>
+    <h4>{{ book.price | currency }}</h4>
+    <p>{{ book.description }}</p>
+  </div>
+</div>

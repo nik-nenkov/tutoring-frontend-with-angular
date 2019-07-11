@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<div style="padding: 18px">
+  <h2>All Books here</h2>
+  <div *ngFor="let book of books; let idx=index">
+    <a [routerLink]="['/book',idx]">
+      <h3>
+        {{ book.title }}
+      </h3>
+    </a>
+  </div>
+</div>
