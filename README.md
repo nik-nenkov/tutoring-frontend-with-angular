@@ -1,3 +1,13 @@
+## Deployment:
+#### Step 1. On Local Machine:
+ng build<br /> 
+docker build -t nnenkov/bike-ng .<br /> 
+docker push nnenkov/bike-ng<br /> 
+#### Step 2. On Production Server:
+sudo docker container rm -f bike-ng<br /> 
+sudo docker pull nnenkov/bike-ng<br /> 
+sudo docker run -d -p 80:80 -p 443:443 --name bike-ng --restart always nnenkov/bike-ng<br /> 
+
 # BookLibraryAngular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.0.
